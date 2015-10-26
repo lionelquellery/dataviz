@@ -1,0 +1,862 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:700);
+#overlay {
+  position: absolute;
+  color:black; /*White*/
+  background:white; /*Black*/
+  width: 100%;
+  height: 100%;
+  z-index:999;
+  display:table;
+  text-align: center;
+  font-size: 2em;
+}
+.overlay-inner {
+  display:table-cell;
+  vertical-align: middle;
+}
+
+
+.coffee {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.coffee:before {
+  content: "DATA SERIES";
+  font-family: 'Oswald', sans-serif;
+  font-weight:bold;
+  font-size: 3em;
+  background:red;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: drinking 2s infinite;
+          animation: drinking 2s infinite;
+}
+.coffee:after {
+  content: "Please wait for data";
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.5em;
+  display: block;
+  text-align: center;
+}
+
+
+
+@-webkit-keyframes drinking {
+  0% {
+    background: -webkit-linear-gradient(black 0%, white 0%);
+    background: linear-gradient(black 0%, white 0%);
+  }
+  1% {
+    background: -webkit-linear-gradient(black 1%, white 1%);
+    background: linear-gradient(black 1%, white 1%);
+  }
+  2% {
+    background: -webkit-linear-gradient(black 2%, white 2%);
+    background: linear-gradient(black 2%, white 2%);
+  }
+  3% {
+    background: -webkit-linear-gradient(black 3%, white 3%);
+    background: linear-gradient(black 3%, white 3%);
+  }
+  4% {
+    background: -webkit-linear-gradient(black 4%, white 4%);
+    background: linear-gradient(black 4%, white 4%);
+  }
+  5% {
+    background: -webkit-linear-gradient(black 5%, white 5%);
+    background: linear-gradient(black 5%, white 5%);
+  }
+  6% {
+    background: -webkit-linear-gradient(black 6%, white 6%);
+    background: linear-gradient(black 6%, white 6%);
+  }
+  7% {
+    background: -webkit-linear-gradient(black 7%, white 7%);
+    background: linear-gradient(black 7%, white 7%);
+  }
+  8% {
+    background: -webkit-linear-gradient(black 8%, white 8%);
+    background: linear-gradient(black 8%, white 8%);
+  }
+  9% {
+    background: -webkit-linear-gradient(black 9%, white 9%);
+    background: linear-gradient(black 9%, white 9%);
+  }
+  10% {
+    background: -webkit-linear-gradient(black 10%, white 10%);
+    background: linear-gradient(black 10%, white 10%);
+  }
+  11% {
+    background: -webkit-linear-gradient(black 11%, white 11%);
+    background: linear-gradient(black 11%, white 11%);
+  }
+  12% {
+    background: -webkit-linear-gradient(black 12%, white 12%);
+    background: linear-gradient(black 12%, white 12%);
+  }
+  13% {
+    background: -webkit-linear-gradient(black 13%, white 13%);
+    background: linear-gradient(black 13%, white 13%);
+  }
+  14% {
+    background: -webkit-linear-gradient(black 14%, white 14%);
+    background: linear-gradient(black 14%, white 14%);
+  }
+  15% {
+    background: -webkit-linear-gradient(black 15%, white 15%);
+    background: linear-gradient(black 15%, white 15%);
+  }
+  16% {
+    background: -webkit-linear-gradient(black 16%, white 16%);
+    background: linear-gradient(black 16%, white 16%);
+  }
+  17% {
+    background: -webkit-linear-gradient(black 17%, white 17%);
+    background: linear-gradient(black 17%, white 17%);
+  }
+  18% {
+    background: -webkit-linear-gradient(black 18%, white 18%);
+    background: linear-gradient(black 18%, white 18%);
+  }
+  19% {
+    background: -webkit-linear-gradient(black 19%, white 19%);
+    background: linear-gradient(black 19%, white 19%);
+  }
+  20% {
+    background: -webkit-linear-gradient(black 20%, white 20%);
+    background: linear-gradient(black 20%, white 20%);
+  }
+  21% {
+    background: -webkit-linear-gradient(black 21%, white 21%);
+    background: linear-gradient(black 21%, white 21%);
+  }
+  22% {
+    background: -webkit-linear-gradient(black 22%, white 22%);
+    background: linear-gradient(black 22%, white 22%);
+  }
+  23% {
+    background: -webkit-linear-gradient(black 23%, white 23%);
+    background: linear-gradient(black 23%, white 23%);
+  }
+  24% {
+    background: -webkit-linear-gradient(black 24%, white 24%);
+    background: linear-gradient(black 24%, white 24%);
+  }
+  25% {
+    background: -webkit-linear-gradient(black 25%, white 25%);
+    background: linear-gradient(black 25%, white 25%);
+  }
+  26% {
+    background: -webkit-linear-gradient(black 26%, white 26%);
+    background: linear-gradient(black 26%, white 26%);
+  }
+  27% {
+    background: -webkit-linear-gradient(black 27%, white 27%);
+    background: linear-gradient(black 27%, white 27%);
+  }
+  28% {
+    background: -webkit-linear-gradient(black 28%, white 28%);
+    background: linear-gradient(black 28%, white 28%);
+  }
+  29% {
+    background: -webkit-linear-gradient(black 29%, white 29%);
+    background: linear-gradient(black 29%, white 29%);
+  }
+  30% {
+    background: -webkit-linear-gradient(black 30%, white 30%);
+    background: linear-gradient(black 30%, white 30%);
+  }
+  31% {
+    background: -webkit-linear-gradient(black 31%, white 31%);
+    background: linear-gradient(black 31%, white 31%);
+  }
+  32% {
+    background: -webkit-linear-gradient(black 32%, white 32%);
+    background: linear-gradient(black 32%, white 32%);
+  }
+  33% {
+    background: -webkit-linear-gradient(black 33%, white 33%);
+    background: linear-gradient(black 33%, white 33%);
+  }
+  34% {
+    background: -webkit-linear-gradient(black 34%, white 34%);
+    background: linear-gradient(black 34%, white 34%);
+  }
+  35% {
+    background: -webkit-linear-gradient(black 35%, white 35%);
+    background: linear-gradient(black 35%, white 35%);
+  }
+  36% {
+    background: -webkit-linear-gradient(black 36%, white 36%);
+    background: linear-gradient(black 36%, white 36%);
+  }
+  37% {
+    background: -webkit-linear-gradient(black 37%, white 37%);
+    background: linear-gradient(black 37%, white 37%);
+  }
+  38% {
+    background: -webkit-linear-gradient(black 38%, white 38%);
+    background: linear-gradient(black 38%, white 38%);
+  }
+  39% {
+    background: -webkit-linear-gradient(black 39%, white 39%);
+    background: linear-gradient(black 39%, white 39%);
+  }
+  40% {
+    background: -webkit-linear-gradient(black 40%, white 40%);
+    background: linear-gradient(black 40%, white 40%);
+  }
+  41% {
+    background: -webkit-linear-gradient(black 41%, white 41%);
+    background: linear-gradient(black 41%, white 41%);
+  }
+  42% {
+    background: -webkit-linear-gradient(black 42%, white 42%);
+    background: linear-gradient(black 42%, white 42%);
+  }
+  43% {
+    background: -webkit-linear-gradient(black 43%, white 43%);
+    background: linear-gradient(black 43%, white 43%);
+  }
+  44% {
+    background: -webkit-linear-gradient(black 44%, white 44%);
+    background: linear-gradient(black 44%, white 44%);
+  }
+  45% {
+    background: -webkit-linear-gradient(black 45%, white 45%);
+    background: linear-gradient(black 45%, white 45%);
+  }
+  46% {
+    background: -webkit-linear-gradient(black 46%, white 46%);
+    background: linear-gradient(black 46%, white 46%);
+  }
+  47% {
+    background: -webkit-linear-gradient(black 47%, white 47%);
+    background: linear-gradient(black 47%, white 47%);
+  }
+  48% {
+    background: -webkit-linear-gradient(black 48%, white 48%);
+    background: linear-gradient(black 48%, white 48%);
+  }
+  49% {
+    background: -webkit-linear-gradient(black 49%, white 49%);
+    background: linear-gradient(black 49%, white 49%);
+  }
+  50% {
+    background: -webkit-linear-gradient(black 50%, white 50%);
+    background: linear-gradient(black 50%, white 50%);
+  }
+  51% {
+    background: -webkit-linear-gradient(black 51%, white 51%);
+    background: linear-gradient(black 51%, white 51%);
+  }
+  52% {
+    background: -webkit-linear-gradient(black 52%, white 52%);
+    background: linear-gradient(black 52%, white 52%);
+  }
+  53% {
+    background: -webkit-linear-gradient(black 53%, white 53%);
+    background: linear-gradient(black 53%, white 53%);
+  }
+  54% {
+    background: -webkit-linear-gradient(black 54%, white 54%);
+    background: linear-gradient(black 54%, white 54%);
+  }
+  55% {
+    background: -webkit-linear-gradient(black 55%, white 55%);
+    background: linear-gradient(black 55%, white 55%);
+  }
+  56% {
+    background: -webkit-linear-gradient(black 56%, white 56%);
+    background: linear-gradient(black 56%, white 56%);
+  }
+  57% {
+    background: -webkit-linear-gradient(black 57%, white 57%);
+    background: linear-gradient(black 57%, white 57%);
+  }
+  58% {
+    background: -webkit-linear-gradient(black 58%, white 58%);
+    background: linear-gradient(black 58%, white 58%);
+  }
+  59% {
+    background: -webkit-linear-gradient(black 59%, white 59%);
+    background: linear-gradient(black 59%, white 59%);
+  }
+  60% {
+    background: -webkit-linear-gradient(black 60%, white 60%);
+    background: linear-gradient(black 60%, white 60%);
+  }
+  61% {
+    background: -webkit-linear-gradient(black 61%, white 61%);
+    background: linear-gradient(black 61%, white 61%);
+  }
+  62% {
+    background: -webkit-linear-gradient(black 62%, white 62%);
+    background: linear-gradient(black 62%, white 62%);
+  }
+  63% {
+    background: -webkit-linear-gradient(black 63%, white 63%);
+    background: linear-gradient(black 63%, white 63%);
+  }
+  64% {
+    background: -webkit-linear-gradient(black 64%, white 64%);
+    background: linear-gradient(black 64%, white 64%);
+  }
+  65% {
+    background: -webkit-linear-gradient(black 65%, white 65%);
+    background: linear-gradient(black 65%, white 65%);
+  }
+  66% {
+    background: -webkit-linear-gradient(black 66%, white 66%);
+    background: linear-gradient(black 66%, white 66%);
+  }
+  67% {
+    background: -webkit-linear-gradient(black 67%, white 67%);
+    background: linear-gradient(black 67%, white 67%);
+  }
+  68% {
+    background: -webkit-linear-gradient(black 68%, white 68%);
+    background: linear-gradient(black 68%, white 68%);
+  }
+  69% {
+    background: -webkit-linear-gradient(black 69%, white 69%);
+    background: linear-gradient(black 69%, white 69%);
+  }
+  70% {
+    background: -webkit-linear-gradient(black 70%, white 70%);
+    background: linear-gradient(black 70%, white 70%);
+  }
+  71% {
+    background: -webkit-linear-gradient(black 71%, white 71%);
+    background: linear-gradient(black 71%, white 71%);
+  }
+  72% {
+    background: -webkit-linear-gradient(black 72%, white 72%);
+    background: linear-gradient(black 72%, white 72%);
+  }
+  73% {
+    background: -webkit-linear-gradient(black 73%, white 73%);
+    background: linear-gradient(black 73%, white 73%);
+  }
+  74% {
+    background: -webkit-linear-gradient(black 74%, white 74%);
+    background: linear-gradient(black 74%, white 74%);
+  }
+  75% {
+    background: -webkit-linear-gradient(black 75%, white 75%);
+    background: linear-gradient(black 75%, white 75%);
+  }
+  76% {
+    background: -webkit-linear-gradient(black 76%, white 76%);
+    background: linear-gradient(black 76%, white 76%);
+  }
+  77% {
+    background: -webkit-linear-gradient(black 77%, white 77%);
+    background: linear-gradient(black 77%, white 77%);
+  }
+  78% {
+    background: -webkit-linear-gradient(black 78%, white 78%);
+    background: linear-gradient(black 78%, white 78%);
+  }
+  79% {
+    background: -webkit-linear-gradient(black 79%, white 79%);
+    background: linear-gradient(black 79%, white 79%);
+  }
+  80% {
+    background: -webkit-linear-gradient(black 80%, white 80%);
+    background: linear-gradient(black 80%, white 80%);
+  }
+  81% {
+    background: -webkit-linear-gradient(black 81%, white 81%);
+    background: linear-gradient(black 81%, white 81%);
+  }
+  82% {
+    background: -webkit-linear-gradient(black 82%, white 82%);
+    background: linear-gradient(black 82%, white 82%);
+  }
+  83% {
+    background: -webkit-linear-gradient(black 83%, white 83%);
+    background: linear-gradient(black 83%, white 83%);
+  }
+  84% {
+    background: -webkit-linear-gradient(black 84%, white 84%);
+    background: linear-gradient(black 84%, white 84%);
+  }
+  85% {
+    background: -webkit-linear-gradient(black 85%, white 85%);
+    background: linear-gradient(black 85%, white 85%);
+  }
+  86% {
+    background: -webkit-linear-gradient(black 86%, white 86%);
+    background: linear-gradient(black 86%, white 86%);
+  }
+  87% {
+    background: -webkit-linear-gradient(black 87%, white 87%);
+    background: linear-gradient(black 87%, white 87%);
+  }
+  88% {
+    background: -webkit-linear-gradient(black 88%, white 88%);
+    background: linear-gradient(black 88%, white 88%);
+  }
+  89% {
+    background: -webkit-linear-gradient(black 89%, white 89%);
+    background: linear-gradient(black 89%, white 89%);
+  }
+  90% {
+    background: -webkit-linear-gradient(black 90%, white 90%);
+    background: linear-gradient(black 90%, white 90%);
+  }
+  91% {
+    background: -webkit-linear-gradient(black 91%, white 91%);
+    background: linear-gradient(black 91%, white 91%);
+  }
+  92% {
+    background: -webkit-linear-gradient(black 92%, white 92%);
+    background: linear-gradient(black 92%, white 92%);
+  }
+  93% {
+    background: -webkit-linear-gradient(black 93%, white 93%);
+    background: linear-gradient(black 93%, white 93%);
+  }
+  94% {
+    background: -webkit-linear-gradient(black 94%, white 94%);
+    background: linear-gradient(black 94%, white 94%);
+  }
+  95% {
+    background: -webkit-linear-gradient(black 95%, white 95%);
+    background: linear-gradient(black 95%, white 95%);
+  }
+  96% {
+    background: -webkit-linear-gradient(black 96%, white 96%);
+    background: linear-gradient(black 96%, white 96%);
+  }
+  97% {
+    background: -webkit-linear-gradient(black 97%, white 97%);
+    background: linear-gradient(black 97%, white 97%);
+  }
+  98% {
+    background: -webkit-linear-gradient(black 98%, white 98%);
+    background: linear-gradient(black 98%, white 98%);
+  }
+  99% {
+    background: -webkit-linear-gradient(black 99%, white 99%);
+    background: linear-gradient(black 99%, white 99%);
+  }
+  100% {
+    background: -webkit-linear-gradient(black 100%, white 100%);
+    background: linear-gradient(black 100%, white 100%);
+  }
+}
+
+@keyframes drinking {
+  0% {
+    background: -webkit-linear-gradient(black 0%, white 0%);
+    background: linear-gradient(black 0%, white 0%);
+  }
+  1% {
+    background: -webkit-linear-gradient(black 1%, white 1%);
+    background: linear-gradient(black 1%, white 1%);
+  }
+  2% {
+    background: -webkit-linear-gradient(black 2%, white 2%);
+    background: linear-gradient(black 2%, white 2%);
+  }
+  3% {
+    background: -webkit-linear-gradient(black 3%, white 3%);
+    background: linear-gradient(black 3%, white 3%);
+  }
+  4% {
+    background: -webkit-linear-gradient(black 4%, white 4%);
+    background: linear-gradient(black 4%, white 4%);
+  }
+  5% {
+    background: -webkit-linear-gradient(black 5%, white 5%);
+    background: linear-gradient(black 5%, white 5%);
+  }
+  6% {
+    background: -webkit-linear-gradient(black 6%, white 6%);
+    background: linear-gradient(black 6%, white 6%);
+  }
+  7% {
+    background: -webkit-linear-gradient(black 7%, white 7%);
+    background: linear-gradient(black 7%, white 7%);
+  }
+  8% {
+    background: -webkit-linear-gradient(black 8%, white 8%);
+    background: linear-gradient(black 8%, white 8%);
+  }
+  9% {
+    background: -webkit-linear-gradient(black 9%, white 9%);
+    background: linear-gradient(black 9%, white 9%);
+  }
+  10% {
+    background: -webkit-linear-gradient(black 10%, white 10%);
+    background: linear-gradient(black 10%, white 10%);
+  }
+  11% {
+    background: -webkit-linear-gradient(black 11%, white 11%);
+    background: linear-gradient(black 11%, white 11%);
+  }
+  12% {
+    background: -webkit-linear-gradient(black 12%, white 12%);
+    background: linear-gradient(black 12%, white 12%);
+  }
+  13% {
+    background: -webkit-linear-gradient(black 13%, white 13%);
+    background: linear-gradient(black 13%, white 13%);
+  }
+  14% {
+    background: -webkit-linear-gradient(black 14%, white 14%);
+    background: linear-gradient(black 14%, white 14%);
+  }
+  15% {
+    background: -webkit-linear-gradient(black 15%, white 15%);
+    background: linear-gradient(black 15%, white 15%);
+  }
+  16% {
+    background: -webkit-linear-gradient(black 16%, white 16%);
+    background: linear-gradient(black 16%, white 16%);
+  }
+  17% {
+    background: -webkit-linear-gradient(black 17%, white 17%);
+    background: linear-gradient(black 17%, white 17%);
+  }
+  18% {
+    background: -webkit-linear-gradient(black 18%, white 18%);
+    background: linear-gradient(black 18%, white 18%);
+  }
+  19% {
+    background: -webkit-linear-gradient(black 19%, white 19%);
+    background: linear-gradient(black 19%, white 19%);
+  }
+  20% {
+    background: -webkit-linear-gradient(black 20%, white 20%);
+    background: linear-gradient(black 20%, white 20%);
+  }
+  21% {
+    background: -webkit-linear-gradient(black 21%, white 21%);
+    background: linear-gradient(black 21%, white 21%);
+  }
+  22% {
+    background: -webkit-linear-gradient(black 22%, white 22%);
+    background: linear-gradient(black 22%, white 22%);
+  }
+  23% {
+    background: -webkit-linear-gradient(black 23%, white 23%);
+    background: linear-gradient(black 23%, white 23%);
+  }
+  24% {
+    background: -webkit-linear-gradient(black 24%, white 24%);
+    background: linear-gradient(black 24%, white 24%);
+  }
+  25% {
+    background: -webkit-linear-gradient(black 25%, white 25%);
+    background: linear-gradient(black 25%, white 25%);
+  }
+  26% {
+    background: -webkit-linear-gradient(black 26%, white 26%);
+    background: linear-gradient(black 26%, white 26%);
+  }
+  27% {
+    background: -webkit-linear-gradient(black 27%, white 27%);
+    background: linear-gradient(black 27%, white 27%);
+  }
+  28% {
+    background: -webkit-linear-gradient(black 28%, white 28%);
+    background: linear-gradient(black 28%, white 28%);
+  }
+  29% {
+    background: -webkit-linear-gradient(black 29%, white 29%);
+    background: linear-gradient(black 29%, white 29%);
+  }
+  30% {
+    background: -webkit-linear-gradient(black 30%, white 30%);
+    background: linear-gradient(black 30%, white 30%);
+  }
+  31% {
+    background: -webkit-linear-gradient(black 31%, white 31%);
+    background: linear-gradient(black 31%, white 31%);
+  }
+  32% {
+    background: -webkit-linear-gradient(black 32%, white 32%);
+    background: linear-gradient(black 32%, white 32%);
+  }
+  33% {
+    background: -webkit-linear-gradient(black 33%, white 33%);
+    background: linear-gradient(black 33%, white 33%);
+  }
+  34% {
+    background: -webkit-linear-gradient(black 34%, white 34%);
+    background: linear-gradient(black 34%, white 34%);
+  }
+  35% {
+    background: -webkit-linear-gradient(black 35%, white 35%);
+    background: linear-gradient(black 35%, white 35%);
+  }
+  36% {
+    background: -webkit-linear-gradient(black 36%, white 36%);
+    background: linear-gradient(black 36%, white 36%);
+  }
+  37% {
+    background: -webkit-linear-gradient(black 37%, white 37%);
+    background: linear-gradient(black 37%, white 37%);
+  }
+  38% {
+    background: -webkit-linear-gradient(black 38%, white 38%);
+    background: linear-gradient(black 38%, white 38%);
+  }
+  39% {
+    background: -webkit-linear-gradient(black 39%, white 39%);
+    background: linear-gradient(black 39%, white 39%);
+  }
+  40% {
+    background: -webkit-linear-gradient(black 40%, white 40%);
+    background: linear-gradient(black 40%, white 40%);
+  }
+  41% {
+    background: -webkit-linear-gradient(black 41%, white 41%);
+    background: linear-gradient(black 41%, white 41%);
+  }
+  42% {
+    background: -webkit-linear-gradient(black 42%, white 42%);
+    background: linear-gradient(black 42%, white 42%);
+  }
+  43% {
+    background: -webkit-linear-gradient(black 43%, white 43%);
+    background: linear-gradient(black 43%, white 43%);
+  }
+  44% {
+    background: -webkit-linear-gradient(black 44%, white 44%);
+    background: linear-gradient(black 44%, white 44%);
+  }
+  45% {
+    background: -webkit-linear-gradient(black 45%, white 45%);
+    background: linear-gradient(black 45%, white 45%);
+  }
+  46% {
+    background: -webkit-linear-gradient(black 46%, white 46%);
+    background: linear-gradient(black 46%, white 46%);
+  }
+  47% {
+    background: -webkit-linear-gradient(black 47%, white 47%);
+    background: linear-gradient(black 47%, white 47%);
+  }
+  48% {
+    background: -webkit-linear-gradient(black 48%, white 48%);
+    background: linear-gradient(black 48%, white 48%);
+  }
+  49% {
+    background: -webkit-linear-gradient(black 49%, white 49%);
+    background: linear-gradient(black 49%, white 49%);
+  }
+  50% {
+    background: -webkit-linear-gradient(black 50%, white 50%);
+    background: linear-gradient(black 50%, white 50%);
+  }
+  51% {
+    background: -webkit-linear-gradient(black 51%, white 51%);
+    background: linear-gradient(black 51%, white 51%);
+  }
+  52% {
+    background: -webkit-linear-gradient(black 52%, white 52%);
+    background: linear-gradient(black 52%, white 52%);
+  }
+  53% {
+    background: -webkit-linear-gradient(black 53%, white 53%);
+    background: linear-gradient(black 53%, white 53%);
+  }
+  54% {
+    background: -webkit-linear-gradient(black 54%, white 54%);
+    background: linear-gradient(black 54%, white 54%);
+  }
+  55% {
+    background: -webkit-linear-gradient(black 55%, white 55%);
+    background: linear-gradient(black 55%, white 55%);
+  }
+  56% {
+    background: -webkit-linear-gradient(black 56%, white 56%);
+    background: linear-gradient(black 56%, white 56%);
+  }
+  57% {
+    background: -webkit-linear-gradient(black 57%, white 57%);
+    background: linear-gradient(black 57%, white 57%);
+  }
+  58% {
+    background: -webkit-linear-gradient(black 58%, white 58%);
+    background: linear-gradient(black 58%, white 58%);
+  }
+  59% {
+    background: -webkit-linear-gradient(black 59%, white 59%);
+    background: linear-gradient(black 59%, white 59%);
+  }
+  60% {
+    background: -webkit-linear-gradient(black 60%, white 60%);
+    background: linear-gradient(black 60%, white 60%);
+  }
+  61% {
+    background: -webkit-linear-gradient(black 61%, white 61%);
+    background: linear-gradient(black 61%, white 61%);
+  }
+  62% {
+    background: -webkit-linear-gradient(black 62%, white 62%);
+    background: linear-gradient(black 62%, white 62%);
+  }
+  63% {
+    background: -webkit-linear-gradient(black 63%, white 63%);
+    background: linear-gradient(black 63%, white 63%);
+  }
+  64% {
+    background: -webkit-linear-gradient(black 64%, white 64%);
+    background: linear-gradient(black 64%, white 64%);
+  }
+  65% {
+    background: -webkit-linear-gradient(black 65%, white 65%);
+    background: linear-gradient(black 65%, white 65%);
+  }
+  66% {
+    background: -webkit-linear-gradient(black 66%, white 66%);
+    background: linear-gradient(black 66%, white 66%);
+  }
+  67% {
+    background: -webkit-linear-gradient(black 67%, white 67%);
+    background: linear-gradient(black 67%, white 67%);
+  }
+  68% {
+    background: -webkit-linear-gradient(black 68%, white 68%);
+    background: linear-gradient(black 68%, white 68%);
+  }
+  69% {
+    background: -webkit-linear-gradient(black 69%, white 69%);
+    background: linear-gradient(black 69%, white 69%);
+  }
+  70% {
+    background: -webkit-linear-gradient(black 70%, white 70%);
+    background: linear-gradient(black 70%, white 70%);
+  }
+  71% {
+    background: -webkit-linear-gradient(black 71%, white 71%);
+    background: linear-gradient(black 71%, white 71%);
+  }
+  72% {
+    background: -webkit-linear-gradient(black 72%, white 72%);
+    background: linear-gradient(black 72%, white 72%);
+  }
+  73% {
+    background: -webkit-linear-gradient(black 73%, white 73%);
+    background: linear-gradient(black 73%, white 73%);
+  }
+  74% {
+    background: -webkit-linear-gradient(black 74%, white 74%);
+    background: linear-gradient(black 74%, white 74%);
+  }
+  75% {
+    background: -webkit-linear-gradient(black 75%, white 75%);
+    background: linear-gradient(black 75%, white 75%);
+  }
+  76% {
+    background: -webkit-linear-gradient(black 76%, white 76%);
+    background: linear-gradient(black 76%, white 76%);
+  }
+  77% {
+    background: -webkit-linear-gradient(black 77%, white 77%);
+    background: linear-gradient(black 77%, white 77%);
+  }
+  78% {
+    background: -webkit-linear-gradient(black 78%, white 78%);
+    background: linear-gradient(black 78%, white 78%);
+  }
+  79% {
+    background: -webkit-linear-gradient(black 79%, white 79%);
+    background: linear-gradient(black 79%, white 79%);
+  }
+  80% {
+    background: -webkit-linear-gradient(black 80%, white 80%);
+    background: linear-gradient(black 80%, white 80%);
+  }
+  81% {
+    background: -webkit-linear-gradient(black 81%, white 81%);
+    background: linear-gradient(black 81%, white 81%);
+  }
+  82% {
+    background: -webkit-linear-gradient(black 82%, white 82%);
+    background: linear-gradient(black 82%, white 82%);
+  }
+  83% {
+    background: -webkit-linear-gradient(black 83%, white 83%);
+    background: linear-gradient(black 83%, white 83%);
+  }
+  84% {
+    background: -webkit-linear-gradient(black 84%, white 84%);
+    background: linear-gradient(black 84%, white 84%);
+  }
+  85% {
+    background: -webkit-linear-gradient(black 85%, white 85%);
+    background: linear-gradient(black 85%, white 85%);
+  }
+  86% {
+    background: -webkit-linear-gradient(black 86%, white 86%);
+    background: linear-gradient(black 86%, white 86%);
+  }
+  87% {
+    background: -webkit-linear-gradient(black 87%, white 87%);
+    background: linear-gradient(black 87%, white 87%);
+  }
+  88% {
+    background: -webkit-linear-gradient(black 88%, white 88%);
+    background: linear-gradient(black 88%, white 88%);
+  }
+  89% {
+    background: -webkit-linear-gradient(black 89%, white 89%);
+    background: linear-gradient(black 89%, white 89%);
+  }
+  90% {
+    background: -webkit-linear-gradient(black 90%, white 90%);
+    background: linear-gradient(black 90%, white 90%);
+  }
+  91% {
+    background: -webkit-linear-gradient(black 91%, white 91%);
+    background: linear-gradient(black 91%, white 91%);
+  }
+  92% {
+    background: -webkit-linear-gradient(black 92%, white 92%);
+    background: linear-gradient(black 92%, white 92%);
+  }
+  93% {
+    background: -webkit-linear-gradient(black 93%, white 93%);
+    background: linear-gradient(black 93%, white 93%);
+  }
+  94% {
+    background: -webkit-linear-gradient(black 94%, white 94%);
+    background: linear-gradient(black 94%, white 94%);
+  }
+  95% {
+    background: -webkit-linear-gradient(black 95%, white 95%);
+    background: linear-gradient(black 95%, white 95%);
+  }
+  96% {
+    background: -webkit-linear-gradient(black 96%, white 96%);
+    background: linear-gradient(black 96%, white 96%);
+  }
+  97% {
+    background: -webkit-linear-gradient(black 97%, white 97%);
+    background: linear-gradient(black 97%, white 97%);
+  }
+  98% {
+    background: -webkit-linear-gradient(black 98%, white 98%);
+    background: linear-gradient(black 98%, white 98%);
+  }
+  99% {
+    background: -webkit-linear-gradient(black 99%, white 99%);
+    background: linear-gradient(black 99%, white 99%);
+  }
+  100% {
+    background: -webkit-linear-gradient(black 100%, white 100%);
+    background: linear-gradient(black 100%, white 100%);
+  }
+}
+
+
