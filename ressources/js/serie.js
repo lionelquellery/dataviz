@@ -18,7 +18,7 @@ else{
 
 
 function getData(param) {
-    $.getJSON( "http://dataviz.dev/dataviz/api_php/search/"+param, function( data ) {
+    $.getJSON( "http://dataviz.dev/api_php/search/"+param, function( data ) {
         init(data);
     });   
 }
