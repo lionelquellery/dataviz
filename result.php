@@ -8,7 +8,7 @@ require('config/result_page/config.php');
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title><?= $serie->name ?></title>
+        <title><?= $data->show->title ?></title>
         <meta description="">
         <meta name="viewport" content="initial-scale=0.2">
         <meta name="viewport" content="width=device-width,user-scalable=no">
@@ -39,7 +39,7 @@ require('config/result_page/config.php');
                    <div class="clear"></div>
                     <!--			info de la serie    -->
                     <h1><?= $data->show->title ?></h1>
-                    <p class="note">TV Show's note :   <?= $data->show->notes->mean ?> / 10</p>
+                    <p class="note">TV Show's note :   <?= $data->show->notes->mean ?> / 5</p>
                     <p class="synopsis"><?= $serie_overview ?>
                     <h2>Popularity over the time</h2>    
                     <nav>
