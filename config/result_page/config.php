@@ -1,6 +1,6 @@
 <?php
 
-$key = '?api_key=d0a923b609a899bbb5a493dc98fe31bd';
+$key = '?key=4a54b75d241c';
 $key_series = $_GET['id'];
 
 // Fonction de la requete curl
@@ -9,7 +9,7 @@ function get_curl_request($url){
 
     $ch = curl_init();
 
-    curl_setopt($ch, CURLOPT_URL, "http://api.themoviedb.org/3/tv/".$url);
+    curl_setopt($ch, CURLOPT_URL, "http://api.betaseries.com/".$url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
     curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -22,26 +22,21 @@ function get_curl_request($url){
     return $response;
 }
 // Requete personnages
-$answer = get_curl_request($key_series."/credits".$key);
+$answer = get_curl_request("shows/characters".$key."&id=".$key_series);
 $characters = json_decode($answer);
 
-//  NOMBRE D'EPISODE PAR SAISON
-
-$answer = get_curl_request($key_series.$key);
+//Requete general
+$answer = get_curl_request("shows/display".$key."&id=".$key_series);
 $serie = json_decode($answer);
-$serie_lenght = strlen($serie->overview);
 
-$counter = $serie->seasons;
-//  NOMBRE DE SAISON
+//  Description
+$serie_lenght = strlen($serie->show->description);
 
-$answer = get_curl_request($key_series."/changes".$key);
-$number_saison = json_decode($answer);
+//Nombre de saisons
+$counter = $serie->show->seasons;
 
-
-// Saison similaire
-
-$answer = get_curl_request($key_series."/similar".$key);
-$similar = json_decode($answer);
+// Serie similaire
+$similar = $serie->show->similars;
 
 
 $saison_data = array();
@@ -91,3 +86,5 @@ else{
         $serie_overview = $serie->overview;
     } 
 }
+
+var_dump($saison_data);
