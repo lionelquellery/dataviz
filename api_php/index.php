@@ -7,7 +7,7 @@ header('Content-type: application/json'); // on définit la page comme json
 require 'flight/Flight.php'; // on intégre la librairie flight
 
 
-$key = '?api_key=d0a923b609a899bbb5a493dc98fe31bd';
+$key = '?key=4a54b75d241c';
 
 
 Flight::route('GET /search/@id', function($id){
@@ -20,7 +20,7 @@ function get_curl_request($url){
 
     $ch = curl_init();
 
-    curl_setopt($ch, CURLOPT_URL, "http://api.themoviedb.org/3/tv/".$url);
+    curl_setopt($ch, CURLOPT_URL, "http://api.betaseries.com/".$url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
     curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -34,7 +34,7 @@ function get_curl_request($url){
 }
 //  NOMBRE D'EPISODE PAR SAISON
 
-$answer = get_curl_request($key_series.$key);
+$answer = get_curl_request("shows/display".$key."&id=".$key_series);
 $serie = json_decode($answer);
 $counter = $serie->seasons;
 
@@ -73,7 +73,9 @@ for($x=0; $x < $ct ; $x++){
         endforeach;
     }
 }
-  
+
+var_dump($saison_data);
+	
 echo json_encode($saison_data, JSON_PRETTY_PRINT);  // json pretty print permet d'indenter ton resultat         
 
 });

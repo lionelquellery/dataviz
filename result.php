@@ -38,14 +38,14 @@ require('config/result_page/config.php');
                 <div class="popularity actual transition_lente">
                    <div class="clear"></div>
                     <!--			info de la serie    -->
-                    <h1><?= $serie->name ?></h1>
-                    <p class="note">TV Show's note :   <?= $serie->vote_average ?> / 10</p>
+                    <h1><?= $data->show->title ?></h1>
+                    <p class="note">TV Show's note :   <?= $data->show->notes->mean ?> / 10</p>
                     <p class="synopsis"><?= $serie_overview ?>
                     <h2>Popularity over the time</h2>    
                     <nav>
 
                         <!--				generation du canvas      -->
-                        <?php if(empty($average_seasons->episodes)){ ?>
+                        <?php if($seasons_number == 0 ){ ?>
                             <div class="no_canvas"><?= $error ?></div>
                         <?php }
                         else { ?>
@@ -53,12 +53,11 @@ require('config/result_page/config.php');
                                 <li>
                                     <input type="button" name="0" value="Serie" class="seasons active first">
                                 </li>
-                                <?php foreach($saison_data as $_data): 
-                                    $compteur_input = $compteur_input + 1;?>
+                                <?php for($i=1; $i < $seasons_number+1; $i++ ){ ?> 
                                     <li>
-                                        <input type="button" name="<?= $compteur_input ?>" value="Season <?= $compteur_input ?>" class="seasons">
+                                        <input type="button" name="<?= $i ?>" value="Season <?= $i ?>" class="seasons">
                                     </li>
-                                <?php endforeach; ?>
+                                <?php } ?>
                             </ul>
 
                     </nav>
@@ -97,30 +96,30 @@ require('config/result_page/config.php');
                     <?php for($c=0; $c<8; $c++){ ?>
                     <!--           image      -->
                     <div class="col-half">
-                        <?php if(empty($characters->cast[$c])){ ?>
+                        <?php if(empty($characters->characters[$c]->picture)){ ?>
                             <div class="radius-img"></div>
                         <?php }
                         else{ ?>
-                            <div style="background-image:url(http://image.tmdb.org/t/p/w154<?= $characters->cast[$c]->profile_path ?>)" class="radius-img"></div>
+                            <div style="background-image:url(<?= $characters->characters[$c]->picture ?>)" class="radius-img"></div>
                         <?php } ?>
                         <!--        nom du personnage joué   --> 
-                        <?php if(empty($characters->cast[$c]->name)){ ?>           
+                        <?php if(empty($characters->characters[$c]->actor)){ ?>           
                             <p class="charactername">
                             </p>
                         <?php }
                         else{ ?>
                             <p class="charactername">
-                                <?= $characters->cast[$c]->name?>
+                                <?= $characters->characters[$c]->actor?>
                             </p>
                         <?php } ?>
                         <!--        nom de l'acteur   -->
-                        <?php if(empty($characters->cast[$c]->character)){ ?>   
+                        <?php if(empty($characters->characters[$c]->name)){ ?>   
                              <p class="actorname">
                             </p>
                         <?php }
                         else{ ?>
                             <p class="actorname">
-                                <span class="as">As </span><?= $characters->cast[$c]->character?>
+                                <span class="as">As </span><?= $characters->characters[$c]->name ?>
                             </p>
                         <?php } ?>
                     </div>
@@ -141,13 +140,13 @@ require('config/result_page/config.php');
                            
                             <div class="timestamp first_graph">
                                 <div class="episode">First air date</div>
-                                <div class="date"><?= $serie->first_air_date ?></div>
+                                <div class="date"><?= $data->show->creation ?></div>
                                 <div class="point"></div>
                             </div>
                             
                             <div class="timestamp last">
                                 <div class="episode">Last air date</div>
-                                <div class="date"><?= $serie->last_air_date ?></div>
+                                <div class="date"><?= "pas de date" ?></div>
                                 <div class="point"></div>
                             </div>
                         
@@ -158,13 +157,13 @@ require('config/result_page/config.php');
                     <div class="bulle">
                        <div class="counter">
                            <div class="count_left count transition">
-                               <input type="hidden" name="<?= $serie->number_of_episodes ?>">
+                               <input type="hidden" name="<?= $episodes_numbers ?>">
                            </div>
                            Number of episodes
                        </div>
                        <div class="counter">   
                            <div class="count_right count transition">
-                               <input type="hidden" name="<?= $serie->number_of_seasons ?>">
+                               <input type="hidden" name="<?= $seasons_number ?>">
                            </div>
                            Number of seasons
                        </div>
@@ -176,22 +175,22 @@ require('config/result_page/config.php');
 
         <!--	    image de droite -->
 
-        <?php if(empty($serie->backdrop_path)){ ?>
+        <?php if(empty(get_picture($data->show->id))){ ?>
             <div class="right" style="background-image:url(ressources/img/nonDispobig.svg)">
         <?php }
         else{ ?>
-            <div class="right" style="background-image:url(http://image.tmdb.org/t/p/w1280<?php echo $serie->backdrop_path ?>)">
+            <div class="right" style="background-image:url(<?php echo get_picture($data->show->id) ?>)">
         <?php }?>
             </div>
 
 
             <!--          suggestions autre series   -->
-            <?php if(!empty($similar->results[0])){ ?>
+            <?php if(!empty($data->show->similars)){ ?>
             <div class="white-block">
                 <i class="fa fa-angle-right"></i>
-                <a href="result.php?id=<?= $similar->results[0]->id ?>">
+                <a href="result.php?id=<?= $data->show->similars ?>">
                     <span class="suggestion">
-                        <img src="http://image.tmdb.org/t/p/w600<?= $similar->results[0]->backdrop_path?>" alt="">
+                        <img src="<?= get_picture($data->show->similars) ?>" alt="">
                     </span>
                 </a>
             </div>
