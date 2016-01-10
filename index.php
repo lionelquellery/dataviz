@@ -19,7 +19,7 @@ require ('config/home/config.php');
             <div class="suggest"  id="hideme">
                 <a href="#" onClick="hide('hideme')" class="close">CLOSE ×</a>
 
-                <?php if($search->total_results == 0){ ?>
+                <?php if(count($search->shows) == 0){ ?>
                 <div class='sorry'>
                     Oops, no TV show matches your search...
                 </div>
@@ -30,18 +30,18 @@ require ('config/home/config.php');
                     <h2>You're maybe looking for :</h2>
 
 
-                    <?php foreach($search->results as $_result):?>
-                    <a href="result.php?id=<?= $_result->id?>">
+                    <?php foreach($search->shows as $show):?>
+                    <a href="result.php?id=<?= $show->id?>">
                         <span class='img'>
-                            <?php if(!empty($_result->backdrop_path)){ ?>
-                            <img src="http://image.tmdb.org/t/p/w75<?= $_result->backdrop_path?>" alt="">
+                            <?php if(!empty(get_picture($show->id))){ ?>
+                            <img src="<?= get_picture($show->id)?>" alt="">
                             <?php }
                              else{ ?>
                             <img src="ressources/img/nonDispoSmall.svg" alt="">
                             <?php } ?>
                         </span>
                         <span>
-                            <?= $_result->original_name ?>
+                            <?= $show->title ?>
                         </span>
                     </a>
                     <br>
@@ -62,17 +62,17 @@ require ('config/home/config.php');
         <div class="container">
             <div class="line"></div>
             <p class="popular">Most popular TV shows :</p>
-            <?php for($i = 0; $i < 19; $i++){?>    
+            <?php foreach($data->shows as $show){?>    
             <div class="media" data-sr="enter top, ease down 20%">
-               <?php if(empty($data->results[$i]->backdrop_path)){ ?> 
+               <?php if(empty(get_picture($show->id))){ ?> 
                    <img src="ressources/img/nonDispoSmall.svg" alt="">
                 <?php }
                 else{ ?>
-                    <img class="media__image" src="http://image.tmdb.org/t/p/w600<?= $data->results[$i]->backdrop_path?>" alt="" />
+                    <img class="media__image" src="<?= get_picture($show->id)?>" alt="" />
                 <?php } ?>
-                <a href="result.php?id=<?= $data->results[$i]->id ?>">
+                <a href="result.php?id=<?= $show->id ?>">
                     <div class="media__body">
-                        <h2><?= $data->results[$i]->original_name?></h2>
+                        <h2><?= $show->title ?></h2>
                     </div>
                 </a>
             </div>
@@ -80,7 +80,7 @@ require ('config/home/config.php');
             <?php } ?>
         </div>
         <div class="reference">
-            Our services use the ThemovieDB api
+            Our services use the Betaseries Api
         </div>
         
 
