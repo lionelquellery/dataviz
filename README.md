@@ -1,13 +1,5 @@
 # dataviz
 
-Fonctionne sur un localhost dataviz.dev
+Website that allow you to see which tv shows are the most popular and to have an overview of this show
 
-#Roadmap
-
-v 1.1.1 --> en cours 
-
-1: voir si il y a pas un moyen d'améliorer l'appel des donnée
-2: revoir un peu le css
-3: revoir le scroll 
-4: revoir le loader 
-
+Working with IMDb api
